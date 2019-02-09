@@ -1,9 +1,9 @@
 import React from "react";
 
-const SpriteScreen = () => {
+const SpriteScreen = ({ sprite, name }) => {
   return (
     <div id="spriteScreen">
-      <p>sprite screen</p>
+      <img className="sprite" src={sprite} alt={name} />
     </div>
   );
 };

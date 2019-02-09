@@ -1,9 +1,16 @@
 import React from "react";
 
-const StatScreen = ({ flavorText }) => {
+const StatScreen = ({ statsInfo }) => {
+  const { name, type, height, weight } = statsInfo;
   return (
     <div id="statScreen">
-      <p>{flavorText}</p>
+      <p>Name:{name}</p>
+      <p>Type:{type}</p>
+      <p>Height:{height}</p>
+      <br />
+      <p>Weight:{weight}</p>
+
+      <p>{}</p>
     </div>
   );
 };

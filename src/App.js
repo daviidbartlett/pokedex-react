@@ -11,28 +11,53 @@ import * as api from "./api";
 
 class App extends Component {
   state = {
-    flavorText: ""
+    pokemonNames: [],
+    statsInfo: {},
+    flavorText: "",
+    sprite: ""
   };
   render() {
-    const { flavorText } = this.state;
+    const { statsInfo, pokemonNames, sprite } = this.state;
     return (
       <div className="App">
         <LeftHeader />
-        <SpriteScreen />
+        <SpriteScreen sprite={sprite} name={statsInfo.name} />
         <LeftButtons />
         <RightHeader />
-        <StatScreen flavorText={flavorText} />
+        <StatScreen statsInfo={statsInfo} />
         <RightButtons />
-        <BottomConsole fetchPokemonStats={this.fetchPokemonStats} />
+        <BottomConsole
+          pokemonNames={pokemonNames}
+          fetchPokemonStats={this.fetchPokemonStats}
+        />
       </div>
     );
   }
+
+  componentDidMount() {
+    this.fetchPokemonNames();
+  }
+
+  fetchPokemonNames = () => {
+    api.getPokemonNames().then((pokemonNames) => {
+      this.setState({ pokemonNames: pokemonNames });
+    });
+  };
 
   fetchPokemonStats = (pokemon) => {
     console.log(`fetching stats for ${pokemon} `);
     api
       .getPokemonStats(pokemon)
-      .then((statsObj) => this.setState({ flavorText: statsObj.flavor_text }));
+      .then(({ name, height, weight, types, sprites }) => {
+        const statsInfo = {
+          name: name,
+          type: types[0].type.name,
+          height: height,
+          weight: weight
+          //flavorText: statsObj.flavorText
+        };
+        this.setState({ statsInfo: statsInfo, sprite: sprites.front_default });
+      });
   };
 }
 
