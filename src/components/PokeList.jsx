@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../api";
+import * as util from "../utils/index";
 
 export default class PokeList extends Component {
   state = {
@@ -7,12 +8,13 @@ export default class PokeList extends Component {
   };
   render() {
     const { pokemon } = this.state;
-    console.log(this.state);
     return (
       <div id="pokeList">
         <ul>
           {pokemon.map((pkmn) => (
-            <li>{pkmn.name}</li>
+            <li key={pkmn.name}>
+              <button>{util.capitaliseString(pkmn.name)}</button>
+            </li>
           ))}
         </ul>
       </div>

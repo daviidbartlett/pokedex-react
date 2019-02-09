@@ -5,8 +5,8 @@ import PokeList from "./PokeList";
 const BottomConsole = () => {
   return (
     <div id="bottomConsole">
-      <EvolutionChain />
       <PokeList />
+      <EvolutionChain />
     </div>
   );
 };
