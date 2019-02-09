@@ -15,4 +15,13 @@ describe("capitaliseString()", () => {
   it("returns string when passed string", () => {
     expect(typeof util.capitaliseString("hello")).toBe("string");
   });
+  it("returns error message if string is not passed", () => {
+    expect(util.capitaliseString(2)).toBe("incorrect data type");
+    expect(util.capitaliseString()).toBe("incorrect data type");
+    expect(util.capitaliseString(null)).toBe("incorrect data type");
+    expect(util.capitaliseString(true)).toBe("incorrect data type");
+  });
+  it("capitalises the first letter of a passed string", () => {
+    expect(util.capitaliseString("pikachu")).toBe("Pikachu");
+  });
 });
