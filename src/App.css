@@ -10,8 +10,44 @@
     "spriteScreen rightButtons"
     "leftButtons evolutionChain";
 }
+#leftHeader {
+  grid-area: leftHeader;
+  background-color: goldenrod;
+  margin: 20px;
+}
 
 #spriteScreen {
   grid-area: spriteScreen;
   background-color: aquamarine;
+  margin: 20px;
+}
+
+#leftButtons {
+  grid-area: leftButtons;
+  background-color: palevioletred;
+  margin: 20px;
+}
+
+#rightHeader {
+  grid-area: rightHeader;
+  background-color: purple;
+  margin: 20px;
+}
+
+#statScreen {
+  grid-area: statScreen;
+  background-color: peachpuff;
+  margin: 20px;
+}
+
+#rightButtons {
+  grid-area: rightButtons;
+  background-color: blue;
+  margin: 20px;
+}
+
+#evolutionChain {
+  grid-area: evolutionChain;
+  background-color: olivedrab;
+  margin: 20px;
 }
