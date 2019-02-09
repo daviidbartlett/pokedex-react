@@ -1,5 +1,8 @@
 .App {
   background-color: red;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
   display: grid;
   width: 100%;
   height: 100vh;
@@ -13,7 +16,8 @@
 #leftHeader {
   grid-area: leftHeader;
   background-color: goldenrod;
-  margin: 20px;
+  margin-right: 20px;
+  border-top-left-radius: 50px;
 }
 
 #spriteScreen {
@@ -34,8 +38,13 @@
 
 #rightHeader {
   grid-area: rightHeader;
-  background-color: purple;
-  margin: 20px;
+  display: grid;
+  grid-template: 1fr 2fr;
+  grid-template-areas:
+    "whiteSpace "
+    "curvedEdge";
+  background-color: red;
+  margin-left: 20px;
 }
 
 #statScreen {
@@ -88,4 +97,30 @@
   border-bottom: 70px solid red;
   border-right: 70px solid transparent;
   bottom: 0;
+}
+
+.emptySpace {
+  grid-area: whiteSpace;
+  background-color: white;
+}
+.curvedEdge {
+  grid-area: curvedEdge;
+  display: grid;
+  grid-template: 1fr 1fr;
+  grid-template-areas: "leftCurve rightCurve";
+}
+.leftCurve {
+  height: 100%;
+  border-top-right-radius: 50px;
+  background-color: red;
+}
+.leftBackground {
+  grid-area: leftCurve;
+  background-color: white;
+}
+
+.rightCurve {
+  grid-area: rightCurve;
+  border-bottom-left-radius: 50px;
+  background-color: white;
 }

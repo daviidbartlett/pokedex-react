@@ -7,6 +7,7 @@ import RightHeader from "./components/RightHeader";
 import StatScreen from "./components/StatScreen";
 import RightButtons from "./components/RightButtons";
 import BottomConsole from "./components/BottomConsole";
+import * as util from "./utils/index";
 import * as api from "./api";
 
 class App extends Component {
@@ -50,7 +51,7 @@ class App extends Component {
       .getPokemonStats(pokemon)
       .then(({ name, height, weight, types, sprites }) => {
         const statsInfo = {
-          name: name,
+          name: util.capitaliseString(name),
           type: types[0].type.name,
           height: height,
           weight: weight

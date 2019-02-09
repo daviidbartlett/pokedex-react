@@ -3,7 +3,13 @@ import React from "react";
 const RightHeader = () => {
   return (
     <div id="rightHeader">
-      <p>RightHeader</p>
+      <div className="emptySpace" />
+      <div className="curvedEdge">
+        <div className="leftBackground">
+          <div className="leftCurve" />
+        </div>
+        <div className="rightCurve" />
+      </div>
     </div>
   );
 };

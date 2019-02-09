@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import * as api from "../api";
 import * as util from "../utils/index";
 
 export default class PokeList extends Component {
