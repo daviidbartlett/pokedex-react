@@ -17,9 +17,13 @@
 }
 
 #spriteScreen {
+  display: flex;
+  position: relative;
   grid-area: spriteScreen;
-  background-color: aquamarine;
-  margin: 20px;
+  background-color: rgb(189, 189, 189);
+  border-radius: 20px;
+  margin: 30px;
+  padding-bottom: 20px;
 }
 
 #leftButtons {
@@ -61,4 +65,27 @@
 }
 #evolutionChain {
   flex: 1;
+}
+
+.spriteFrame {
+  flex: 1;
+  background-color: white;
+  margin: 40px;
+  border-radius: 15px;
+  border: solid 5px black;
+}
+
+.sprite {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 70px solid red;
+  border-right: 70px solid transparent;
+  bottom: 0;
 }
