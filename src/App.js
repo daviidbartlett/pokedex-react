@@ -6,7 +6,7 @@ import LeftButtons from "./components/LeftButtons";
 import RightHeader from "./components/RightHeader";
 import StatScreen from "./components/StatScreen";
 import RightButtons from "./components/RightButtons";
-import EvolutionChain from "./components/EvolutionChain";
+import BottomConsole from "./components/BottomConsole";
 
 class App extends Component {
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
         <RightHeader />
         <StatScreen />
         <RightButtons />
-        <EvolutionChain />
+        <BottomConsole />
       </div>
     );
   }

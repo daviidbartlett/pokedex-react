@@ -8,7 +8,7 @@
     "leftHeader rightHeader"
     "spriteScreen statScreen"
     "spriteScreen rightButtons"
-    "leftButtons evolutionChain";
+    "leftButtons bottomConsole";
 }
 #leftHeader {
   grid-area: leftHeader;
@@ -46,8 +46,8 @@
   margin: 20px;
 }
 
-#evolutionChain {
-  grid-area: evolutionChain;
+#bottomConsole {
+  grid-area: bottomConsole;
   background-color: olivedrab;
   margin: 20px;
 }
