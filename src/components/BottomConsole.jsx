@@ -2,10 +2,10 @@ import React from "react";
 import EvolutionChain from "./EvolutionChain";
 import PokeList from "./PokeList";
 
-const BottomConsole = () => {
+const BottomConsole = ({ fetchPokemonStats }) => {
   return (
     <div id="bottomConsole">
-      <PokeList />
+      <PokeList fetchPokemonStats={fetchPokemonStats} />
       <EvolutionChain />
     </div>
   );

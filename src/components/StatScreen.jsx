@@ -1,9 +1,9 @@
 import React from "react";
 
-const StatScreen = () => {
+const StatScreen = ({ flavorText }) => {
   return (
     <div id="statScreen">
-      <p>stateScreen</p>
+      <p>{flavorText}</p>
     </div>
   );
 };
