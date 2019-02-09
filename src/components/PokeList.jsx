@@ -20,8 +20,8 @@ export default class PokeList extends Component {
   }
 
   fetchPokemonNames = () => {
-    api.getPokemonNames().then((pokeArr) => {
-      this.setState({ pokemon: pokeArr });
+    api.getPokemonNames().then((pokemonNames) => {
+      this.setState({ pokemon: pokemonNames });
     });
   };
 }
